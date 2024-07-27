@@ -4,7 +4,10 @@
 </head>
 <body>
 <h1>Terapias </h1>
-<table class="table table-striped">
+
+<ngb-alert [type]="'danger'" *ngIf="errorMessage" (closed)="errorMessage=''">{{ errorMessage }}</ngb-alert>
+
+<table *ngIf="!errorMessage" class="table table-striped">
   <thead>
   <tr>
     <td>ID</td>

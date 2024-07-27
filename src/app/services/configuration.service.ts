@@ -8,6 +8,6 @@ export class ConfigurationService {
   constructor() { }
 
   public serverURL(): String {
-    return "http://localhost:8080/";
+    return "http://localhost:8080";
   }
 }

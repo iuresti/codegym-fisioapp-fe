@@ -13,6 +13,6 @@ export class TherapyService {
   }
 
   getAll(): Observable<Therapy[]> {
-    return this.httpClient.get<Therapy[]>(`${this.configuration.serverURL()}/api/therapy`)
+    return this.httpClient.get<Therapy[]>(`/api/therapy`)
   }
 }

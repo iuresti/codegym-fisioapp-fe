@@ -17,7 +17,7 @@ export class LoginService {
   }
 
   login(loginData: Login): Observable<LoggedUserInfo> {
-    return this.httpClient.post<LoggedUserInfo>(`${this.configuration.serverURL()}/auth/login`, loginData).pipe(
+    return this.httpClient.post<LoggedUserInfo>(`/auth/login`, loginData).pipe(
       tap(info => {
 
         sessionStorage.setItem(LoginService.AUTH_HEADER, `Basic ${btoa(loginData.username + ":" + loginData.password)}`);
